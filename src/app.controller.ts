@@ -15,4 +15,10 @@ export class AppController {
     const result = this.appService.getPositionList();
     return result
   }
+
+  @Get('/getCourseList')
+  getCourseList(): Promise<Array<string>> {
+    const result = this.appService.getCourseList()
+    return result
+  }
 }

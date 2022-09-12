@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { getMapLocation } from './api/getMapLocation';
+import { getCourseList } from './api/course'
 
 @Injectable()
 export class AppService {
@@ -20,5 +21,9 @@ export class AppService {
         longitude: Number(data[0])
       }
     })
+  }
+
+  async getCourseList(): Promise<Array<any>> {
+    return await getCourseList()
   }
 }
